@@ -67,7 +67,7 @@ module.exports = Encore = async (Encore, m, chatUpdate, store) => {
         const budy = (typeof m.text === 'string' ? m.text : '');
         const prefa = ["", "!", ".", ",", "🐤", "🗿"];
 
-        const prefixRegex = /^[°zZ#$@*+,.?=''():√%!¢£¥€π¤ΠΦ_&><`™©®Δ^βα~¦|/\\©^]/;
+        const prefixRegex = `/^[°zZ#$@*+,.?=''():√%!¢£¥€π¤ΠΦ_&><™©®Δ^βα~¦|/\\©^]/`;
         const prefix = prefixRegex.test(body) ? body.match(prefixRegex)[0] : `${setprefix}`;
         const from = m.key.remoteJid;
         const isGroup = from.endsWith("@g.us");
